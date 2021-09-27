@@ -18,7 +18,7 @@ class HomeCoordinator: ObservableObject {
 
 extension HomeCoordinator {
     // MARK: - Navigation
-    func openDetails(user: User) {
+    func openDetails(user: UserModel) {
         detailsCoordinator = DetailsCoordinator(user: user)
     }
 }

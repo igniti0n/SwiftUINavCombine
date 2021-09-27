@@ -7,14 +7,14 @@
 
 import Foundation
 
-class User: Codable, Identifiable {
+struct UserModel: Codable, Identifiable {
     let id: String
     let name: String
     let about: String
-    let friends: [Friend]
+    let friends: [FriendModel]
 }
 
-class Friend: Codable, Identifiable {
+struct FriendModel: Codable, Identifiable {
     let id: String
     let name: String
 }

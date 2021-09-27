@@ -10,7 +10,7 @@ import Foundation
 class FriendCooridnator: ObservableObject {
     @Published var viewModel: FriendViewModel!
     
-    init(friend: Friend) {
+    init(friend: FriendModel) {
         viewModel = FriendViewModel(coordinator: self,friend: friend)
     }
 }

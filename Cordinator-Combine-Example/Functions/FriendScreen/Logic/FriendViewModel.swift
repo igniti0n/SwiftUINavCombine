@@ -8,11 +8,11 @@
 import Foundation
 
 class FriendViewModel: ObservableObject {
-    @Published var friend: Friend!
+    @Published var friend: FriendModel!
     
     unowned private let coordinator: FriendCooridnator
     
-    init(coordinator: FriendCooridnator, friend: Friend) {
+    init(coordinator: FriendCooridnator, friend: FriendModel) {
         self.friend = friend
         self.coordinator = coordinator
     }

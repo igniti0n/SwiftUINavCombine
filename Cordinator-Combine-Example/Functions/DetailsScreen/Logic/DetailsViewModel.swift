@@ -8,18 +8,18 @@
 import Foundation
 
 class DetailsViewModel: ObservableObject {
-    @Published var user: User
+    @Published var user: UserModel
     
     unowned private let coordinator: DetailsCoordinator
     
-    init(coordinator: DetailsCoordinator, user: User) {
+    init(coordinator: DetailsCoordinator, user: UserModel) {
         self.coordinator = coordinator
         self.user = user
     }
 }
 
 extension DetailsViewModel {
-    func openFriendScreen(friend: Friend) {
+    func openFriendScreen(friend: FriendModel) {
         coordinator.openFriendScreen(friend: friend)
     }
 }

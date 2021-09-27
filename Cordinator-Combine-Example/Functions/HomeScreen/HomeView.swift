@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
+    @FetchRequest(entity: User.entity(), sortDescriptors: []) var fetchedUsers: FetchedResults<User>
     @ObservedObject private var viewModel: HomeViewModel
     
     init(viewModel: HomeViewModel) {
@@ -21,6 +22,8 @@ struct HomeView: View {
                 .onNavigation {
                     viewModel.openDetails(user: user)
                 }
+        }.onAppear() {
+                viewModel.fetchUsers(usersFromDb: fetchedUsers)
         }
     }
 }

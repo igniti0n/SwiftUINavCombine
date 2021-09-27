@@ -11,14 +11,14 @@ class DetailsCoordinator: ObservableObject {
     @Published var viewModel: DetailsViewModel!
     @Published var friendCoordinator: FriendCooridnator?
     
-    init(user: User) {
+    init(user: UserModel) {
         self.viewModel = DetailsViewModel(coordinator: self, user:  user)
     }
 }
 
 extension DetailsCoordinator {
     // MARK: - Navigation
-    func openFriendScreen(friend: Friend) {
+    func openFriendScreen(friend: FriendModel) {
         friendCoordinator = FriendCooridnator(friend: friend)
     }
 }
